@@ -1,5 +1,5 @@
 /*               REGISTRATING AND LOGIN SYSTEM
-In lines 14 and 34 you can change the place for saving usernames and passwords*/
+In lines 14 and 34 you can change the place for saving usernames and passwords  */
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -11,7 +11,7 @@ bool IsLoggedIn() {
     cout << "Enter username: "; cin >> yourName;
     cout << "Enter password: "; cin >> yourPword;
 
-    ifstream read("D:" + yourName + ".txt");
+    ifstream read("D:" + yourName + ".txt");        // Storage for the data can be changed. I use a flesh drive (for testing).
     getline(read, realName);
     getline(read, realPword);
 
@@ -31,7 +31,7 @@ bool IsLoggedIn() {
                 cout << "Select a password: "; cin >> yourPword;
 
                 ofstream file;
-                file.open("D:" + yourName + ".txt");                      // Storage for the data can be changed. I use a flesh drive (for testing).
+                file.open("D:" + yourName + ".txt");
                 file << yourName << endl << yourPword;
                 file.close();
 
